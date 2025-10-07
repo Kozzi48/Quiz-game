@@ -8,7 +8,7 @@ body{
     margin: 0;
 }
 
-.quiz-container{
+.quiz-container, .start-container, .score-container{
     background-color: lightgray;
     padding: 100px;
     border-radius: 30px;
@@ -69,7 +69,7 @@ h1{
 }
 
 .score-container h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -101,7 +101,7 @@ h1{
     margin: 20px;
 }
 
-.start-button {
+.start-button, .next-button, .play-againbutton {
     background-color: green;
     color: white;
     padding: 12px 24px;
@@ -112,6 +112,7 @@ h1{
     transition: 0.3s;
 }
 
+.start-button:hover, .play-againbutton:hover,
 .start-button:hover {
     background-color: #005f99;
 }
