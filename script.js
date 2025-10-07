@@ -62,6 +62,7 @@ const scoreContainer = document.querySelector(".score-container");
 const startContainer = document.querySelector(".start-container");
 const startButton = document.querySelector(".start-button");
 const quizContent = document.querySelector(".quiz-content");
+const playAgainBtn = scoreContainer.querySelector(".next-button");
 
 startButton.addEventListener("click", startQuiz);
 
@@ -137,8 +138,12 @@ function showScore() {
     scoreContainer.style.display = "block";
     scoreContainer.querySelector("P").textContent = `${score}/${questions.length}`;
     nextButton.style.display = "none";
+    quizContent.style.display = "none";
 
-    const playAgainBtn = scoreContainer.querySelector("next-button");
-    playAgainBtn.textContent = "Play Again";
-    playAgainBtn.onclick = startQuiz;
+    const playAgainBtn = scoreContainer.querySelector(".play-again-button");
+    playAgainBtn.onclick = () => {
+        scoreContainer.style.display ="none";
+        startContainer.style.display ="block";
+        questionElement.textContent ="";
+    };
 }
